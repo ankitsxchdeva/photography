@@ -38,40 +38,35 @@ header {
     background-color: #333;
     color: #fff;
 }
-
 .photo-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 0 4px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adaptive columns based on screen size */
+    align-items: start;
+    grid-auto-rows: calc(200px * 2 / 3); /* Row height based on the minimum 3:2 ratio */
+    grid-gap: 8px 0; /* 10px vertical gap, no horizontal gap */
 }
 
 .photo-container img {
-    margin-top: 8px;
-    vertical-align: middle;
     width: 100%;
-    max-width: 300px;
-    transition: transform 0.2s, box-shadow 0.3s;
-}
-
-.photo-container img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    object-fit: cover; /* Changes to 'cover' to ensure full cell usage */
 }
 
 @media (max-width: 800px) {
-    header {
-        font-size: 20px;
-        padding: 10px;
-    }
-
     .photo-container {
-        justify-content: center;
-    }
-
-    .filter-btn {
-        padding: 8px 16px;
-        font-size: 14px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-auto-rows: calc(150px * 2 / 3); /* Adjusted for smaller screen */
     }
 }
+
+@media (max-width: 400px) {
+    .photo-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-auto-rows: calc(100px * 2 / 3);
+    }
+}
+
+
+
+
+

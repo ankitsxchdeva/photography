@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankit's shitty photos</title>
+    <title>ankit's shitty photos</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <!--    <header>
-        <h1>Ankit Sachdeva</h1>
-    </header> -->
     <div id="filters" class="filter-container">
         <button class="filter-btn" onclick="filterSelection('all')">show all</button>
         <button class="filter-btn" onclick="filterSelection('street')">street</button>
         <button class="filter-btn" onclick="filterSelection('portrait')">portrait</button>
         <button class="filter-btn" onclick="filterSelection('food')">food</button>
         <button class="filter-btn" onclick="filterSelection('mino')">mino</button>
-        <button class="filter-btn" onclick="filterselection('macro')">macro</button>
+        <button class="filter-btn" onclick="filterSelection('landscape')">landscape</button>
+        <button class="filter-btn" onclick="filterSelection('misc')">misc</button>
     </div>
     <div id="gallery" class="photo-container">
-        <img src="images/mino1.jpg" alt="Mino in the park" data-category="mino" class="photo">
-        <!-- Add more photos here with similar structure -->
+        <img src="images/marin-coast-1.jpg" alt="marin-coast-1.jpg" data-category="landscape" class="photo">
+        <img src="images/marin-coast-2.jpg" alt="marin-coast-2.jpg" data-category="landscape" class="photo">
+        <img src="images/marin-coast-3.jpg" alt="marin-coast-3.jpg" data-category="landscape" class="photo">
+        <img src="images/marin-coast-4.jpg" alt="marin-coast-4.jpg" data-category="landscape" class="photo">
+        <img src="images/ice-cream.jpg" alt="ice-cream.jpg" data-category="food" class="photo">
+        <img src="images/mino-1.jpg" alt="mino-1.jpg" data-category="mino" class="photo">
+        <img src="images/mino-3.jpg" alt="mino-3.jpg" data-category="mino" class="photo">
+        <img src="images/mino-2.jpg" alt="mino-2.jpg" data-category="mino" class="photo">
+        <img src="images/mino-5.jpg" alt="mino-5.jpg" data-category="unknown" class="photo">
+        <img src="images/mino-4.jpg" alt="mino-4.jpg" data-category="mino" class="photo">
     </div>
     <script src="js/script.js"></script>
 </body>
-
 </html>
+

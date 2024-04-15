@@ -1,2 +1,2 @@
-# photography
-portfolio or something idk yet 
+todo:
+- add support for vertical previews
