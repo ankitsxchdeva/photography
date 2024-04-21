@@ -20,6 +20,13 @@ html {
     border-right: 1px solid #ddd; /* Separator line */
 }
 
+/* Hide sidebar on smaller screens */
+@media (max-width: 810px) { /* Adjust the max-width as needed for your design */
+    .filter-container {
+        display: none;
+    }
+}
+
 .filter-item {
     display: block; /* Stack vertically */
     margin-bottom: 10px; /* Space between items */
