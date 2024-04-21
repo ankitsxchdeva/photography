@@ -36,11 +36,11 @@ def generate_html(directory, thumbnail_directory, input_file='index.html', outpu
         if filename.endswith(".jpg") or filename.endswith(".png"):
             category = existing_images.get(filename, 'misc')  # Use existing category if available
             # Create an img tag for each photo using thumbnails and setting data-fullres to the original
-            img_tag = f'<img src="thumbnails/{filename}" alt="{filename}" data-fullres="images/{filename}" data-category="{category}" class="photo">\n'
+            img_tag = f'            <img src="thumbnails/{filename}" alt="{filename}" data-fullres="images/{filename}" data-category="{category}" class="photo">\n'
             gallery_html += img_tag
 
     # Close the gallery div
-    gallery_html += '</div>'
+    gallery_html += '       </div>'
 
     # Replace old gallery with new gallery in the HTML content
     new_html_content = re.sub(r'<div id="gallery" class="photo-container">.*?</div>', gallery_html, html_content, flags=re.DOTALL)
