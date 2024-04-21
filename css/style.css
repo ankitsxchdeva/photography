@@ -12,6 +12,7 @@ html {
 }
 
 .filter-container {
+    font-family: 'Source Sans Pro', sans-serif;
     flex: 0 0 80px; /* Sidebar width */
     height: 100vh; /* Full viewport height */
     overflow-y: auto; /* Scroll if content is too long */
