@@ -39,6 +39,31 @@ html {
     text-decoration: underline;
 }
 
+.modal-arrow {
+    position: absolute;
+    bottom: 20px; /* Adjust the position as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px; /* Adjust size as needed */
+    padding: 10px;
+    cursor: pointer;
+    user-select: none; /* Prevents the arrows from being selectable */
+}
+
+.modal-arrow-left {
+    left: 20px; /* Adjust the position as needed */
+}
+
+.modal-arrow-right {
+    right: 20px; /* Adjust the position as needed */
+}
+
+/* Optional: Add transitions or effects for hover state */
+.modal-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
 .photo-container {
     flex: 1; /* Take up remaining space */
     padding: 10px;

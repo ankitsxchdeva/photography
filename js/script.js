@@ -48,8 +48,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Disable context menu and dragging on the modal image
         modalImg.addEventListener('contextmenu', e => e.preventDefault());
         modalImg.addEventListener('mousedown', e => e.preventDefault()); // Disables dragging
+
+        const leftArrow = document.createElement('div');
+        leftArrow.innerHTML = '&#9664;'; // HTML entity for left-pointing triangle
+        leftArrow.classList.add('modal-arrow', 'modal-arrow-left');
+        leftArrow.onclick = () => changeImage(-1);
+    
+        // Create right arrow
+        const rightArrow = document.createElement('div');
+        rightArrow.innerHTML = '&#9654;'; // HTML entity for right-pointing triangle
+        rightArrow.classList.add('modal-arrow', 'modal-arrow-right');
+        rightArrow.onclick = () => changeImage(1);
+
+
     
         modal.appendChild(modalImg);
+        modal.appendChild(leftArrow);
+        modal.appendChild(rightArrow);
         modal.onclick = closeModal;
         document.body.appendChild(modal);
         modalOpen = true;
@@ -96,6 +111,17 @@ document.addEventListener('DOMContentLoaded', () => {
             changeImage(-1);
         }
     });
+
+    leftArrow.onclick = (e) => {
+        e.stopPropagation();
+        changeImage(-1);
+    };
+    
+    rightArrow.onclick = (e) => {
+        e.stopPropagation();
+        changeImage(1);
+    };
+    
 });
 
 // Call this function with `filterSelection('all', this)` etc.
